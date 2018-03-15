@@ -1,0 +1,74 @@
+// Be happy
+
+#include<iostream>
+#include<string>
+using namespace std;
+
+int main()
+{
+    //Local Variable
+    char choice;
+    string name;
+    
+    //Code
+    
+    //Motivational Quote
+    
+    cout<<"Life has a way of kicking us when we’re down. And just when we think we can’t fall any lower, we get kicked again. \nBut it’s important to remember that setbacks, failures, and tragedy are a part of life."<<endl;
+    
+    //Enter Name
+    cout<<"\n Enter Name: ";
+    getline(cin,name);
+    
+    // Options For User to Choose From
+    cout<<"\n A. Are you going through a really tough situation and it feels unending? "<<endl;
+    cout<<"B. Are you in loss or trouble and need comforting words of hope? "<<endl;
+    cout<<"C. Do you feel like what you have isn't enough? "<<endl;
+    cout<<"D. Do you feel like you will never have your success story? "<<endl;
+    cout<<"E. Are you scared of the unknown? "<<endl;
+    cout<<"F. Are you confused about your life's purpose? "<<endl;
+    cout<<" Enter Option that associates with you => ";
+    // User is to pick from option A-F
+    cin>>choice;
+    
+    //To Handle User's Choice
+    
+    if(choice=='A')
+    {
+    cout <<" Here's your answer "<<name<<" :"<<"\n\t When things are bad, take comfort in the thought that they could always get worse. \nAnd when they are, find hope in the thought that things are so bad they have to get better.";
+    }//if
+     
+   else if(choice=='B')
+   {
+   cout <<" Here's your answer "<<name<<" :"<<"\n\t With the new day comes new strength and new thoughts.";
+   }//else if
+
+   else if(choice=='C')
+   {
+    cout <<" Here's your answer "<<name<<" :"<<"\n\t Take time today to appreciate beauty - \nnatural beauty, art, people.\n Slow down, breathe deeply, smile.It's a beautiful world.";
+   }//else if
+
+    else if(choice=='D')
+    {
+    cout <<" Here's your answer "<<name<<" :"<<"\n\t In spite of unseasonable wind, snow and unexpected weather of all sorts - a gardener still plants.\n And tends what they have planted ... believing that Spring will come."; 
+    }//else if
+
+    else if(choice=='E')
+    {
+    cout <<" Here's your answer "<<name<<" :"<<"\n\t Know that the greatest fear is fear of the unknown./n Seek to meet the unknown with courage and a sense of adventure.";
+    }//else if
+
+    else if(choice=='F')
+    {
+    cout <<" Here's your answer"<<name<<" :"<<"\n\tThe purpose of life is to live it, to taste experience to the utmost, \n to reach out eagerly and without fear for newer and richer experience.";
+    }//else if
+    
+    else
+     cout << "Just smiling goes a long way toward making you feel better about life.\n Enter a valid option between A and F:";
+
+     system("Pause");
+     return 0;
+    
+    
+    
+}//main
