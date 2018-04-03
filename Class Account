@@ -1,0 +1,120 @@
+// Class Account
+#include<iostream>
+#include<string>
+using namespace std;
+//gv
+class Account
+{
+    private:
+        string number;
+        double balance;
+    public:
+        Account();
+        Account(string,double);
+        void deposite(double);
+        void withdraw(double);
+        string get_number();
+        double get_balance();
+        void set_balance(double);    
+        void set_number(string);
+        void print();    
+};
+
+//class Account function's definition
+Account::Account()
+{
+}
+
+Account::Account(string account_number, double account_balance)
+{
+number=account_number;
+balance=account_balance;    
+}
+
+void Account::deposite(double amount)
+{
+    balance+=amount;
+    return;
+}
+
+void Account::withdraw(double amount)
+{
+    if(balance>=amount)
+    balance-=amount;
+    else
+    cout<<"Can not Withdraw "<<amount<<" from "<<balance<<endl;
+    return;
+}
+
+string Account::get_number()
+{
+    return number;
+}
+
+double Account::get_balance()
+{
+    return balance;
+}
+
+void Account::set_number(string account_number)
+{
+    number=account_number;
+    return;
+}
+
+void Account::set_balance(double amount)
+{
+    balance=amount;
+    return;
+}
+
+void Account::print()
+{
+    cout<<"Account Number: "<<number<<endl;
+    cout<<"Account Current Balance: "<<balance<<endl;
+}
+
+//function declaration
+int main()
+{
+//local var
+Account my_account;
+Account your_account("123456", 3000.00);
+string account_number;
+double balance;
+
+//code
+cout<<"Enter His Acocunt Number: ";
+cin>>account_number;
+
+cout<<"Enter His Balance: ";
+cin>>balance;
+
+Account his_account(account_number,balance);
+
+cout<<"His Account: "<<endl;
+his_account.print();
+
+cout<<"My Account: "<<endl;
+my_account.print();
+
+cout<<"Your Account: "<<endl;
+your_account.print();
+ 
+cout<<"My Account: "<<endl;
+//my_account.set_number("22222");
+cout<<"Enter Account Number: ";
+cin>>account_number;
+my_account.set_number(account_number);
+my_account.deposite(1000.00);
+my_account.print();
+
+cout<<"Your Account: "<<endl;
+your_account.withdraw(1000.00);
+your_account.print();
+
+system("pause");
+return 0;
+}
+//function definition
+
